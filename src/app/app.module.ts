@@ -1,20 +1,23 @@
+import { ProductsModule } from './products/products.module';
+import { CartsModule } from './carts/carts.module';
+import { SharedModule } from './Shared/shared.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './Shared/header/header.component';
-import { FooterComponent } from './Shared/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule,
+    CartsModule,
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
